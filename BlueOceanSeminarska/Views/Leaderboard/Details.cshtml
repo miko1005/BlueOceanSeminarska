@@ -1,0 +1,178 @@
+﻿@model BlueOceanSeminarska.App_Start.PoslaniPodatki
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PoslaniPodatki</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.auth_usr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.auth_usr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.remote_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.remote_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.game_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.game_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.game_session_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.game_session_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.currencycode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.currencycode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.round_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.round_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.final)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.final)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.is_bonus_win)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_bonus_win)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.is_freeround_bet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_freeround_bet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.is_freeround_win)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_freeround_win)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.is_jackpot_win)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_jackpot_win)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.is_rollback)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_rollback)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.balance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.balance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nickname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nickname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.platform_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.platform_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.agent_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.agent_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.agent_prefix)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.agent_prefix)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.group)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.group)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumZapisa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatumZapisa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

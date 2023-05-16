@@ -1,0 +1,147 @@
+﻿@model IEnumerable<BlueOceanSeminarska.App_Start.PoslaniPodatki>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.auth_usr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.remote_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.game_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.game_session_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.currencycode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.round_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.final)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_bonus_win)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_freeround_bet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_freeround_win)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_jackpot_win)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_rollback)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.balance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nickname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.platform_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.agent_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.agent_prefix)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.group)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DatumZapisa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.auth_usr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.remote_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.game_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.game_session_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.currencycode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.round_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.final)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.is_bonus_win)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.is_freeround_bet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.is_freeround_win)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.is_jackpot_win)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.is_rollback)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.balance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nickname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.platform_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.agent_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.agent_prefix)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.group)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DatumZapisa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-pink fixed-top">
+        <a class="navbar-brand" href="@Url.Action("Index", "Home")" style="margin-left:300px">
+            <img src="@Url.Content("~/Content/pngwing.com (1).png")" alt="Logo" class="mr-2" width="50" height="50">
+            BLUEOCEAN TOURNAMENTS
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("tournament", "Leaderboard")">Tournaments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("top10", "Leaderboard")">Leaderboard</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <div class="container body-content" style="margin-top: 70px;">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

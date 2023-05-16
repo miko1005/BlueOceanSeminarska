@@ -1,0 +1,136 @@
+﻿@using BlueOceanSeminarska.App_Start
+
+@model BlueOceanSeminarska.Models.TournamentViewModel
+
+@{
+    ViewBag.Title = "tournament";
+}
+<style>
+    body {
+        background-image: url('/Content/bg-image.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+</style>
+@{
+    // Calculate how many days are left until the end of the current week
+    var endOfWeek = DateTime.Now.AddDays(7 - (int)DateTime.Now.DayOfWeek);
+    var daysLeft = (endOfWeek - DateTime.Now).Days;
+}
+<h1>Live Tournaments</h1>
+<p>
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">SPIN-TO-WIN!</a>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">GOLD AND GOLD</button>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">SHOW ALL</button>
+</p>
+<div class="row">
+    <div class="col">
+        <div class="multi-collapse hiding" id="multiCollapseExample1">
+            <div class="card card-body">
+                <h3>Most spins:</h3>
+                <table class="table table-striped table-hover bg-success" style="border : 5px #FFC0CB; border-radius: 10px">
+                    <thead>
+                        <tr class="bg-dark">
+                            <th>Place</th>
+                            <th>Player</th>
+                            <th>Plays</th>
+                            <th>Prize</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{ int a = 0; }
+                        @foreach (var item in Model.Spins)
+                        {
+                            <tr>
+                                <td style="width:20%">@(a = a + 1).</td>
+                                <td>@item.remoteid</td>
+                                <td>@item.spincount</td>
+                                <td>
+                                    @{
+                                        switch (a)
+                                        {
+                                            case 1:
+                                                @("3.000 €")
+                                                break;
+                                            case 2:
+                                                @("2.000 €")
+                                                break;
+                                            case 3:
+                                                @("1.500 €")
+                                                break;
+                                            default:
+                                                @("500 €")
+                                                break;
+                                        }
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="collapse multi-collapse hiding" id="multiCollapseExample2">
+            <div class="card card-body">
+                <h3>Biggest wins:</h3>
+                <table class="table table-striped table-hover bg-warning" style="border : 5px #FFC0CB; border-radius: 10px">
+                    <thead>
+                        <tr class="bg-primary">
+                            <th>Place</th>
+                            <th>Player</th>
+                            <th>Biggest Win</th>
+                            <th>Prize</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{ int b = 0; }
+                        @foreach (var item in Model.BiggestWins)
+                        {
+                            <tr>
+                                <td style="width:20%">@(b = b + 1).</td>
+                                <td>@item.RemoteId</td>
+                                <td>@item.MaxAmount</td>
+                                <td>
+                                    @{
+                                        switch (b)
+                                        {
+                                            case 1:
+                                                @("4.000 €")
+                                                break;
+                                            case 2:
+                                                @("3.000 €")
+                                                break;
+                                            case 3:
+                                                @("2.000 €")
+                                                break;
+                                            default:
+                                                @("750 €")
+                                                break;
+                                        }
+                                    }
+                                </td>
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<p>There are @daysLeft days left until the end of the current week.</p>
+
+
+
+
+
+
+
+
+
+
+
+
